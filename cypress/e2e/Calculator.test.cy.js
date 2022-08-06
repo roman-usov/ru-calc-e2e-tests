@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import '../support/commands';
+git
 
 describe('calculator', () => {
   beforeEach(() => {
