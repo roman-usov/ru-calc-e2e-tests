@@ -6,8 +6,11 @@
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "start": "parcel index.html",
+    "start:serve": "serve",
+    "test:cy": "start-server-and-test start:serve http://localhost:3000 cy:open",
     "build": "parcel build index.html --dist-dir ./dist",
-    "lint": "eslint src/script.js"
+    "lint": "eslint src/script.js",
+    "cy:open": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +21,8 @@
     "cross-env": "^7.0.3",
     "eslint-plugin-jest": "^26.5.3",
     "happy-dom": "^5.3.0",
-    "jest-environment-jsdom": "^28.1.1"
+    "jest-environment-jsdom": "^28.1.1",
+    "cypress": "^10.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -29,6 +33,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
@@ -37,6 +42,8 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "jest": "^28.1.0",
     "parcel": "^2.6.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "serve": "^14.0.1",
+    "start-server-and-test": "^1.14.0"
   }
 }

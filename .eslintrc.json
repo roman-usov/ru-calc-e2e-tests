@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "extends": ["airbnb", "prettier", "plugin:cypress/recommended"],
   "plugins": ["prettier", "jest"],
   "rules": {
     "prettier/prettier": "error",
@@ -18,5 +18,12 @@
     "browser": true,
     "node": true,
     "jest/globals": true
+  },
+  "globals": {
+    "cy": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 13
   }
 }
